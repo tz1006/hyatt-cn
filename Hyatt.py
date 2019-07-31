@@ -15,6 +15,11 @@ class Hyatt(HyattHotel):
         self.downloading = []
         self.futures = []
         self.hotels = hotels
+        self.check_dir()
+    def check_dir(self):
+        # 检查目录
+        if not os.path.exists(data_dir):
+            os.makedirs(data_dir)
     def get_date(self, date):
         if date in self.ready():
             try:
