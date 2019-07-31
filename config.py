@@ -9,7 +9,7 @@ max_workers = 2
 server_port = 4002
 
 # data目录
-data_dir = data
+data_dir = 'data'
 
 # temp目录
 temp_dir = 'temp'
