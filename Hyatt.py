@@ -2,15 +2,19 @@
 # -*- coding: UTF-8 -*-
 # filename: Hyatt.py
 
+
+import os
 import threading
 
-from HyattHotel import HyattHotel
+from HyattHotel import HyattHotel, hotels
 from config import data_dir
 
 
 class Hyatt(HyattHotel):
     def __init__(self):
         self.downloading = []
+        self.futures = []
+        self.hotels = hotels
     def get_date(self, date):
         if date in self.ready():
             try:
