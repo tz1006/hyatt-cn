@@ -50,7 +50,7 @@ def get_hotel_price(hotelcode, date):
     d = {'Code': code,
          'Date': date,
          'Name': hotel.name,
-         'Brand': hotel.brand
+         'Brand': hotel.brand,
          'Price': price,
          'Price_CUP': CUP_price,
          'Price_CUP_total': Total_CUP_price,
