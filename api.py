@@ -28,7 +28,7 @@ def get_page(date):
         return jsonify([])
     elif type(data) == type([]):
         #return jsonify(data)
-        return render_template('template.html', date=date, hotels=data)
+        return render_template('price.html', date=date, hotels=data)
 
 
 
