@@ -8,7 +8,7 @@ from pytz import timezone
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from tqdm import tqdm
 
-#from HyattCode import hotels
+from HyattCode import hotels
 from HyattPrice import get_hotel_price
 from HyattTool import Hotel
 from config import max_workers
