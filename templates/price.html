@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>凯悦最低房价</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <div class="container">
+        <h2>{{date}}</h2>
+        <hr />
+        <p>以下价格均为含税价</p>
+        <table class="table">
+            <thead>
+                <th scope="col">酒店名</th>
+                <th scope="col">最低价</th>
+                <th scope="col">住三送二</th>
+                <th scope="col">住三送二总价</th>
+                <th scope="col">货币单位</th>
+                <th scope="col">折扣</th>
+                <th scope="col">品牌</th>
+            </thead>
+            <tbody>
+                <meta charset="UTF-8">
+                {% for hotel in hotels %}
+                <tr>
+                    <td>{{ hotel.Name }}</td>
+                    <td>{{ hotel.Price }}</td>
+                    <td>{{ hotel.Price_CUP }}</td>
+                    <td>{{ hotel.Price_CUP_total }}</td>
+                    <td>{{ hotel.Currency }}</td>
+                    <td>{{ hotel.Discount }}</td>
+                    <td>{{ hotel.Brand }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
