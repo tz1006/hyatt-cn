@@ -42,7 +42,7 @@ class webloader():
         self.proxy = (ip, port)
     def init_chrome(self):
         self.set_option()
-        self.driver = Chrome('./chromedriver', options=self.option)
+        self.driver = Chrome(options=self.option)
         self.driver.set_page_load_timeout(self.timeout)
         #self.driver.minimize_window()
     def get_page(self, url, timeout=30):
