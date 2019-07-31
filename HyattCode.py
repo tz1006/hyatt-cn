@@ -3,8 +3,9 @@
 # filename: HyattCode.py
 
 
+import os
+import json
 import requests
-from tqdm import tqdm
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 
