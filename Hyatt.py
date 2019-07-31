@@ -16,6 +16,7 @@ class Hyatt(HyattHotel):
         self.futures = []
         self.hotels = hotels
         self.check_dir()
+        self.__start()
     def check_dir(self):
         # 检查目录
         if not os.path.exists(data_dir):
