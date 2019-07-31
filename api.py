@@ -22,7 +22,7 @@ def get_page(date):
     data = hyatt.get_date(date)
     if type(data) == type(''):
         # 301
-        return jsonify([])
+        return jsonify(date)
     elif data == None:
         # 301
         return jsonify([])
