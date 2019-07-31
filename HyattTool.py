@@ -20,6 +20,9 @@ class Hotel():
         save_json(self.code, date d)
     def load(self, date):
         load_json(self.code, date)
+    def url(self, date, CUP):
+        url = hotelcode2url(self.code, date, CUP)
+        return url
 
 
 def hotelcode2url(hotelcode, date, CUP):
