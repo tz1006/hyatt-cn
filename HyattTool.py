@@ -15,6 +15,7 @@ class Hotel():
     def __init__(self, hotelcode):
         self.code = hotelcode
         self.name = hotels[hotelcode]['name']
+        self.brand = hotel_brand(self.name)
     def save(self, d):
         date = d['Date']
         save_json(self.code, date d)
@@ -23,6 +24,23 @@ class Hotel():
     def url(self, date, CUP):
         url = hotelcode2url(self.code, date, CUP)
         return url
+
+
+def hotel_brand(name):
+    brand = '未知'
+    if '柏悦' in name:
+        brand = '柏悦'
+    elif '君悦' in name:
+        brand = '君悦'
+    elif '嘉轩' in name:
+        brand = '凯悦嘉轩'
+    elif '嘉寓' in name:
+        brand = '凯悦嘉公寓'
+    elif '凯悦酒店' in name:
+        brand = '凯悦'
+    elif '素凯泰' in name:
+        brand = 'SLH'
+    return brand
 
 
 def hotelcode2url(hotelcode, date, CUP):
