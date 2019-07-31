@@ -22,7 +22,7 @@ class HyattHotel():
         # 验证日期
         ddate = datetime.strptime(date, '%Y-%m-%d').date()
         today = datetime.now(timezone('Asia/Shanghai')).date()
-        if (today - ddate) > 0:
+        if (today - ddate).days > 0:
             raise BaseException
         # Pending
         pending = []
