@@ -18,9 +18,9 @@ class HyattHotel():
     def __init__(self):
         self.hotels = hotels
         self.futures = []
-    def update_date(self, date):
+    def update_price(self, date):
         # 验证日期
-        ddate = datetime.strptime(date, '%Y-%m-%d')
+        ddate = datetime.strptime(date, '%Y-%m-%d').date()
         today = datetime.now(timezone('Asia/Shanghai')).date()
         if (today - ddate) > 0:
             raise BaseException
