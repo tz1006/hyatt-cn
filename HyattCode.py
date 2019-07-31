@@ -6,6 +6,7 @@
 import requests
 from tqdm import tqdm
 from bs4 import BeautifulSoup
+from urllib.parse import urlencode
 
 from config import temp_dir
 
@@ -78,7 +79,7 @@ class HyattCode():
         hotels = get_cn_hotels()
         # 保存JSON
         path = '%s/hotelcode.json' % temp_dir
-        with open(path, 'w'), as f:
+        with open(path, 'w') as f:
             content = json.dumps(hotels)
             f.write(content)
         print('HyattCode保存', path)
