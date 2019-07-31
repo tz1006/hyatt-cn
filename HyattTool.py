@@ -18,7 +18,7 @@ class Hotel():
         self.brand = hotel_brand(self.name)
     def save(self, d):
         date = d['Date']
-        save_json(self.code, date d)
+        save_json(self.code, date, d)
     def load(self, date):
         load_json(self.code, date)
     def url(self, date, CUP):
@@ -79,7 +79,7 @@ def save_json(hotelcode, date, d):
         os.makedirs(dir_path)
     # 保存JSON
     path = '%s/%s.json' % (dir_path, hotelcode)
-    with open(path, 'w'), as f:
+    with open(path, 'w') as f:
         content = json.dumps(d)
         f.write(content)
     print('保存', path)
